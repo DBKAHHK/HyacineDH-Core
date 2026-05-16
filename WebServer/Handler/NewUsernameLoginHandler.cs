@@ -11,6 +11,11 @@ public class NewUsernameLoginHandler
     public JsonResult Handle(string account, string password)
     {
         NewLoginResJson res = new();
+
+        if (ConfigManager.Config.ServerOption.SingleUser)
+        {
+            account = ConfigManager.Config.ServerOption.SingleUsername;
+        }
         var accountData = AccountData.GetAccountByUserName(account);
 
         if (accountData == null)
