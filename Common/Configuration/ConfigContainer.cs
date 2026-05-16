@@ -90,6 +90,8 @@ public class ServerOption
     public WelcomeMailOption WelcomeMail { get; set; } = new();
     public ServerProfile ServerProfile { get; set; } = new();
     public bool AutoCreateUser { get; set; } = true;
+    public bool SingleUser { get; set; } = true;
+    public string SingleUsername { get; set; } = "player";
     public LogOption LogOption { get; set; } = new();
     public ServerConfig ServerConfig { get; set; } = new();
     public ChallengePeakOption ChallengePeak { get; set; } = new();
